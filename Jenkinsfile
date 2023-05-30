@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Imprimir Hola Mundo'){
             steps {
-                sh "python holamundo.py"
+                sh "python3 holamundo.py"
             }
         }
     }
