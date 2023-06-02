@@ -3,9 +3,22 @@ pipeline {
     agent any // Requerido
 
     stages {
-        stage('Imprimir Hola Mundo'){
+        stage('Ejecutar pruebas unitarias'){
             steps {
-                sh "python3 holamundo.py"
+                echo 'Ejecutando pruebas unitarias'
+            }
+        }
+
+        stage('Ejecutar compilacion'){
+            steps {
+                echo 'Ejecutando compilacion'
+            }
+        }
+
+        stage('Ejecutar deploy'){
+            when { branch 'development' }
+            steps {
+                echo 'Ejecutando deployment'
             }
         }
     }
