@@ -1,4 +1,4 @@
-// Pipeline Declarativo
+// Prueba
 pipeline { 
     agent any // Requerido
 
